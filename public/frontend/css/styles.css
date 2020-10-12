@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 :root {
     --colorDark: #2f3237;
 }
@@ -15,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--colorDark);
+    font-family: 'PT Sans', sans-serif;
 }
 
 #principal {
@@ -68,9 +70,14 @@ body {
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 35px;
     border-left: 3px solid white;
     padding-left: 30px;
+}
+
+#quote-info h2 {
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
 }
 
 #quote-author {
@@ -79,20 +86,33 @@ body {
     justify-content: center;
     width: 60%;
     margin: auto;
+    padding: 10px 20px;
 }
 
-#quote-author h2{
+#quote-author a {
+    text-decoration: none;
+    color: white;
+}
+
+#quote-author:hover a, #quote-author:hover {
+    background-color: white;
+    color: var(--colorDark);
+}
+
+#quote-author h3 {
     font-weight: bold;
+    font-size: 22px;
     margin: 5px 0;
 }
 
 #quote-author p {
     padding: 0;
     margin: 0;
+    text-transform: capitalize;
 }
 
-footer {
-    background-color: yellow;
+#footer {
     width: 100%;
     height: 20%;
+    border-top: 1px solid white;
 }

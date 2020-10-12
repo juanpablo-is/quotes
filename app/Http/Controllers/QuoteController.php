@@ -10,9 +10,13 @@ class QuoteController extends Controller
     public function index()
     {
         $quote = Quote::getRandom();
-        $quote->quote = (object) $quote->quotes[0];
-        return view('quotes.home',[
+        return view('quotes.home', [
             "quote" => $quote
         ]);
+    }
+
+    public function random()
+    {
+        return json_encode(Quote::getRandom());
     }
 }

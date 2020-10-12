@@ -20,13 +20,9 @@
             </div>
         </header>
         <main id="main">
-            <div id="quote-info">{{ $quote->quote->quoteText }}</div>
-            <div id="quote-author">
-                <h2>{{ $quote->quote->quoteAuthor }}</h2>
-                <p>{{ $quote->quote->quoteGenre ?? 'Not genre' }}</p>
-            </div>
+            @include('quotes.quote', [$quote])
         </main>
-        <footer></footer>
+        <footer id="footer"></footer>
     </section>
 </body>
 
