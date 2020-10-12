@@ -113,3 +113,9 @@ body {
     margin: 0;
     text-transform: capitalize;
 }
+
+@media (max-width: 590px) {
+    #quote-info h2 {
+        font-size: 20px;
+    }
+}
