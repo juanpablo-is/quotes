@@ -10,4 +10,8 @@ class Quote
     {
         return json_decode(file_get_contents(self::$url . $path), $opcion);
     }
+    
+    public static function getGenres(){
+        return json_decode(file_get_contents(self::$url . 'genres'), false);
+    }
 }

@@ -16,3 +16,10 @@ $('#random').click(function () {
         }
     });
 });
+
+let btnMenu = true;
+$('#btnMenu').click(function () {
+    $('#menu').css('display', btnMenu ? 'block' : 'none');
+    $('#principal').css('padding-left', btnMenu ? '20%' : '0%');
+    btnMenu = !btnMenu;
+});

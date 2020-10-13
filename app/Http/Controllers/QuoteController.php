@@ -11,7 +11,8 @@ class QuoteController extends Controller
     {
         $quote = Quote::getRandom('quotes/random');
         return view('quotes.home', [
-            "quote" => $quote->quote
+            "quote" => $quote->quote,
+            'genres' => Quote::getGenres()
         ]);
     }
 
@@ -25,7 +26,8 @@ class QuoteController extends Controller
         $url = 'authors/' . str_replace(' ', '%20', $author) . (request('page') ? '?page=' . request('page') : '');
         return view('quotes.find', [
             "type" => $author,
-            "quotes" => Quote::getRandom($url)->quotes
+            "quotes" => Quote::getRandom($url)->quotes,
+            'genres' => Quote::getGenres()
         ]);
     }
 
@@ -34,7 +36,8 @@ class QuoteController extends Controller
         $url = 'genres/' . str_replace(' ', '%20', $genre) . (request('page') ? '?page=' . request('page') : '');
         return view('quotes.find', [
             "type" => $genre,
-            "quotes" => Quote::getRandom($url)->quotes
+            "quotes" => Quote::getRandom($url)->quotes,
+            'genres' => Quote::getGenres()
         ]);
     }
 }

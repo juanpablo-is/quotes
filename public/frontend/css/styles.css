@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
 :root {
     --colorDark: #2f3237;
+    --colorMenu: #2a2b2f;
 }
 
 html {
@@ -11,12 +12,17 @@ html {
     box-sizing: inherit;
 }
 
+a {
+    text-decoration: none;
+}
+
 body {
     display: flex;
     margin: 0;
     padding: 0;
     background-color: var(--colorDark);
     font-family: 'PT Sans', sans-serif;
+    transform: all .3s ease;
 }
 
 #principal {
@@ -32,7 +38,33 @@ body {
     display: none;
     width: 20%;
     height: 100vh;
-    background-color: green;
+    background-color: var(--colorMenu);
+    transition: all .3s ease;
+    overflow-x: auto;
+    position: fixed;
+}
+
+#menu h1 {
+    color: white;
+    text-align: center;
+}
+
+#menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    width: 100;
+    text-align: center;
+    padding: 10px 0;
+    color: white;
+    cursor: pointer;
+}
+
+#menu li:hover {
+    background-color: var(--colorDark);
 }
 
 #header {
@@ -42,6 +74,7 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     color: white;
+    position: fixed;
 }
 
 #header>img {
@@ -61,6 +94,7 @@ body {
     display: flex;
     flex-direction: column;
     color: white;
+    padding-top: 5%;
 }
 
 .quote {

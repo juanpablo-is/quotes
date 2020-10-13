@@ -12,10 +12,22 @@
 
 <body>
 
-    <section id="menu"></section>
+    <section id="menu">
+        <a href="{{ route('quote.index') }}">
+            <h1>Quotes</h1>
+        </a>
+        <hr>
+        <ul>
+            @foreach($genres->genres as $genre)
+            <a href="{{ route('quote.genre', $genre) }}">
+                <li> {{ $genre }} </li>
+            </a>
+            @endforeach
+        </ul>
+    </section>
     <section id="principal">
         <header id="header">
-            <img src="{{ asset('frontend/images/menu-white.svg') }}" alt="">
+            <img id="btnMenu" src="{{ asset('frontend/images/menu-white.svg') }}" alt="">
             @yield('random')
         </header>
         <main id="main">
